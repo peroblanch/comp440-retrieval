@@ -7,7 +7,7 @@ summarized as one-liners.
 <!-- transcript-session: ee7ad5e5-2d3b-4d67-a7e7-986479c607ac | 2026-10-20T19:08:21.142Z -->
 ## Session `ee7ad5e5`, 2026-10-20 19:08:21
 
-*19 user turns. Tool outputs and reasoning omitted.*
+*20 user turns. Tool outputs and reasoning omitted.*
 
 **User:**
 Let's start the assignment
@@ -279,5 +279,36 @@ I think combining them in addition to things like N-grams would make them much b
 - 🔧 `Bash`: Commit Part 5 and push
 - 🔧 `Skill`: checkpoint
 - 🔧 `Bash`: Run the checkpoint check
+- 🔧 `Bash`: Refresh transcript, get repo URL, check status
+- 🔧 `Bash`: Push any transcript commit
+Your answer is in the slot as you said it, and Part 5 is saved on GitHub. Here is the checkpoint output:
+
+```
+== The commands ==
+  search.py (a tiny TF-IDF search): ran, 0.8 s
+  top_terms.py (one movie): ran, 0.6 s
+
+== What is missing ==
+  Nothing.
+
+== Saved on GitHub ==
+  Everything is committed and pushed.
+
+0 things missing.
+Your work is pushed, so complete the Work Submission Form, https://forms.gle/mgKcnqzTGxNaGvteA, choose "Activity submission", and in its box write "Representing and Retrieving Knowledge" and your repository's GitHub URL.
+```
+
+The transcript script's last line:
+
+```
+1 session(s) found; this session in TRANSCRIPT.md: yes.
+```
+
+Now complete the [Work Submission Form](https://forms.gle/mgKcnqzTGxNaGvteA), choose "Activity submission", and in its box write "Representing and Retrieving Knowledge" and your repository's GitHub URL: https://github.com/peroblanch/comp440-retrieval
+
+Have you submitted the form?
+
+**User:**
+Yes
 
 <!-- end-session: ee7ad5e5-2d3b-4d67-a7e7-986479c607ac -->
