@@ -278,5 +278,6 @@ I think combining them in addition to things like N-grams would make them much b
 - 🔧 `Edit`: /Users/owenblanchard/CollectiveIntelligence/comp440-retrieval/WRITEUP.md
 - 🔧 `Bash`: Commit Part 5 and push
 - 🔧 `Skill`: checkpoint
+- 🔧 `Bash`: Run the checkpoint check
 
 <!-- end-session: ee7ad5e5-2d3b-4d67-a7e7-986479c607ac -->
