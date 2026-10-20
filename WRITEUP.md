@@ -34,11 +34,13 @@ Most of the words for The Town are pretty specific to the movie, although it's i
 
 ### Your questions, as you typed them
 
-XXXX
+Dystopian train heist
+Apocalypse Tundra Chris Evans
+Conspiracy revolution on a train
 
 ### Did the movies you meant come up? What did TF-IDF get right and wrong?
 
-XXXX
+The movie I meant did not come up. It appears to pick up on the most specific terms, and find movies that also have them, without combining them as a whole. I wonder if n-grams would help it solve problems like this, because for example separating chris and evans is not helpful. Although maybe I should've tried to remember the characters name.
 
 ## Part 4: The question bank
 
