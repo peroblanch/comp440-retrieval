@@ -46,11 +46,11 @@ The movie I meant did not come up. It appears to pick up on the most specific te
 
 ### Which kind of question did TF-IDF handle best, and which worst? By how much?
 
-XXXX
+It's very good at questions which contain character names or reference a plot point which is in the title. It's terrible at more generic plot descriptions without specifiers, no matter how unique or specific to the movie those descriptions are.
 
 ### The misses you looked at: what do they have in common?
 
-XXXX
+Many of the misses name characters, title pieces, or plot points in ways that slightly miss the description. For example, for Shawshank, 'a quiet man sentenced to life for murders...', the description instead says "the double murder of", so these don't overlap. Similarly, 'twelve angry men' doesn't overlap with '12 jurors', or "Furiosa" doesn't show up in the description for mad max, despite being the central character.
 
 ## Part 5: Embeddings
 
