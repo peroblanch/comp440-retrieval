@@ -7,7 +7,7 @@ summarized as one-liners.
 <!-- transcript-session: ee7ad5e5-2d3b-4d67-a7e7-986479c607ac | 2026-10-20T19:08:21.142Z -->
 ## Session `ee7ad5e5`, 2026-10-20 19:08:21
 
-*4 user turns. Tool outputs and reasoning omitted.*
+*7 user turns. Tool outputs and reasoning omitted.*
 
 **User:**
 Let's start the assignment
@@ -64,5 +64,33 @@ True, remove stop words. Stop words have no semantic value, aren't interesting o
 - 🔧 `Edit`: /Users/owenblanchard/CollectiveIntelligence/comp440-retrieval/tfidf_settings.py
 - 🔧 `Edit`: /Users/owenblanchard/CollectiveIntelligence/comp440-retrieval/tfidf_settings.py
 - 🔧 `Edit`: /Users/owenblanchard/CollectiveIntelligence/comp440-retrieval/WRITEUP.md
+- 🔧 `Bash`: Show settings, commit Part 1, push, check upstream
+- 🔧 `Bash`: Check model folder and packages
+The packages are installed and `top_terms.py` is ready to run. Which two movies do you know well? Any movie you rated in HW1 is in the collection.
+
+**User:**
+Check if Project Hail Mary is in the collection. Check if The Hunger Games is in the collection.
+
+**Claude:**
+- 🔧 `Bash`: Run top terms for both titles
+Project Hail Mary isn't in the collection. The closest title was Project X (2012), which is a different movie. The Hunger Games (2012) is in the collection, and its output is above.
+
+Which other movie do you know well? Pick one that is in the collection.
+
+**User:**
+The Town
+
+**Claude:**
+- 🔧 `Bash`: Run top terms for The Town
+Both movies are done. Here is the Part 2 question:
+
+What do the top terms get right and wrong about what makes each movie distinctive? A sentence or two for each is enough.
+
+**User:**
+Most of the words for The Town are pretty specific to the movie, although it's interesting that it picks up on unique adjectives like burgeoning, which I wouldn't say is distinctive for the town as much as it's a relatively rare word. For The Hunger Games, the terms seem quite accurate, mostly containing names and relatively unique or rare terms directly relevant to the plot and nature of the film. I think that has to do with The Town description being primarily about the relationships between characters, rather than the actual heist/contents of the movie.
+
+**Claude:**
+- 🔧 `Edit`: /Users/owenblanchard/CollectiveIntelligence/comp440-retrieval/WRITEUP.md
+- 🔧 `Bash`: Commit Part 2, push, check upstream
 
 <!-- end-session: ee7ad5e5-2d3b-4d67-a7e7-986479c607ac -->
