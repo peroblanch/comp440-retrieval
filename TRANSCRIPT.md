@@ -7,7 +7,7 @@ summarized as one-liners.
 <!-- transcript-session: ee7ad5e5-2d3b-4d67-a7e7-986479c607ac | 2026-10-20T19:08:21.142Z -->
 ## Session `ee7ad5e5`, 2026-10-20 19:08:21
 
-*3 user turns. Tool outputs and reasoning omitted.*
+*4 user turns. Tool outputs and reasoning omitted.*
 
 **User:**
 Let's start the assignment
@@ -39,5 +39,30 @@ Next I'll commit and push Part 0. Do you want to add anything to either one firs
 
 **User:**
 Go
+
+**Claude:**
+- 🔧 `Bash`: Dump transcript, commit Part 0, push
+- 🔧 `Read`: /Users/owenblanchard/CollectiveIntelligence/comp440-retrieval/tfidf_settings.py
+Part 0 is saved on GitHub. The `Update TRANSCRIPT.md` commit in the log was made by the transcript script.
+
+**Part 1: Build the TF-IDF model (about 6 minutes).** In class you'll likely get through Part 3 or 4. Part 5 is fine to do at home, and anything unfinished is due 8:00am Thursday.
+
+Here are the three settings in the file's order. Words are always lowercased, so "Dog" and "dog" are one word. That isn't a setting.
+
+1. **REMOVE_STOP_WORDS** (now `False`). It drops very common words before scoring. With `True`, "the dog ran to the park" becomes "dog ran park". The values are `True` or `False`. The list is scikit-learn's and is wider than "the" and "of". It also drops words like "bill", "fire", "name", "system" and the number words "one" to "twelve", except "seven".
+
+2. **MIN_MOVIES** (now `1`). It keeps only words that appear in at least this many movies' summaries. With 3, a name that appears in one summary is thrown away. Any whole number from 1 up works. 1 is the only value that keeps a word found in a single summary.
+
+3. **REPEATS_COUNT_LESS** (now `False`). It controls how much a repeated word counts inside one summary. With `False`, "dog" four times counts as 4. With `True`, it counts 1 + log(4), about 2.4. The values are `True` or `False`.
+
+What are your three choices, each with a reason, in one reply?
+
+**User:**
+True, remove stop words. Stop words have no semantic value, aren't interesting or helpful, and will appear frequently across movie descriptions if not removed. Min_Movies can remain 1, both systems should be able to handle extremely infrequent words that only appear in one movie, but there could be value in identifying movies based on prompts relevant only to that movie. Repeat counts less should be true. This is a fundamental part of TF-IDF, and making it less sensitive to repeat words is an important part of the algorithms functionality.
+
+**Claude:**
+- 🔧 `Edit`: /Users/owenblanchard/CollectiveIntelligence/comp440-retrieval/tfidf_settings.py
+- 🔧 `Edit`: /Users/owenblanchard/CollectiveIntelligence/comp440-retrieval/tfidf_settings.py
+- 🔧 `Edit`: /Users/owenblanchard/CollectiveIntelligence/comp440-retrieval/WRITEUP.md
 
 <!-- end-session: ee7ad5e5-2d3b-4d67-a7e7-986479c607ac -->
