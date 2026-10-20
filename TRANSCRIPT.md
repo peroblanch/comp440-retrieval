@@ -7,7 +7,7 @@ summarized as one-liners.
 <!-- transcript-session: ee7ad5e5-2d3b-4d67-a7e7-986479c607ac | 2026-10-20T19:08:21.142Z -->
 ## Session `ee7ad5e5`, 2026-10-20 19:08:21
 
-*10 user turns. Tool outputs and reasoning omitted.*
+*13 user turns. Tool outputs and reasoning omitted.*
 
 **User:**
 Let's start the assignment
@@ -129,5 +129,54 @@ The movie I meant did not come up. It appears to pick up on the most specific te
 **Claude:**
 - 🔧 `Edit`: /Users/owenblanchard/CollectiveIntelligence/comp440-retrieval/WRITEUP.md
 - 🔧 `Bash`: Commit Part 3, push, run TF-IDF evaluation
+Your answer is in the slot as you said it, and Part 3 is saved on GitHub.
+
+**Part 4: The question bank (about 9 minutes).** I ran every question in the bank with your TF-IDF settings. Here is the output:
+
+```
+TF-IDF, with your settings: REMOVE_STOP_WORDS = True, MIN_MOVIES = 1, REPEATS_COUNT_LESS = True.
+Ran 518 questions against 4,309 movies in under a second.
+
+TF-IDF put the right movie first for 21 of 100 written questions and in the top 10 for 32.
+  Of the 34 detail questions, it put 21 first and 32 in the top 10.
+  Of the 33 reworded questions, it put 0 first and 0 in the top 10.
+  Of the 33 vague questions, it put 0 first and 0 in the top 10.
+It put the right movie first for 21 of 418 real requests and in the top 10 for 66.
+
+Saved every question's top 10 in results/tfidf.json. To look through them: uv run python site.py
+```
+
+Which kind of question did TF-IDF handle best, and which worst? By how much? A sentence or two is enough.
+
+**User:**
+<ide_selection>The user selected the lines 3695 to 3695 from /Users/owenblanchard/CollectiveIntelligence/comp440-retrieval/results/tfidf.json:
+question
+
+This may or may not be related to the current task.</ide_selection>
+
+It's very good at questions which contain character names or reference a plot point which is in the title. It's terrible at more generic plot descriptions without specifiers, no matter how unique or specific to the movie those descriptions are.
+
+**Claude:**
+- 🔧 `Edit`: /Users/owenblanchard/CollectiveIntelligence/comp440-retrieval/WRITEUP.md
+- 🔧 `Bash`: Write slot, start comparison site, read its output
+- 🔧 `Bash`: Read README's site description
+Your answer is in the slot as you said it. Your answer didn't give a number for "by how much". You can add one if you want.
+
+One way this could mislead you: the three kinds have only about 33 questions each, so one or two questions change a percentage a lot.
+
+The site is running at http://localhost:8765. It shows one question at a time: the right movie, where TF-IDF ranked it, and TF-IDF's top 10 with the words each shares with the question. Look through some answers, especially the misses. Pick "TF-IDF missed" in the Show menu to see only those. Tell me when you've looked, and which ones you picked.
+
+**User:**
+How many am I comenting on?
+
+**Claude:**
+There's no set number. Look at as many misses as you like, but two or three is plenty for class. Then tell me what the misses you looked at have in common, in a sentence or two. If you'd like to talk about a particular question, give me its id, like w026.
+
+**User:**
+Many of the misses name characters, title pieces, or plot points in ways that slightly miss the description. For example, for Shawshank, 'a quiet man sentenced to life for murders...', the description instead says "the double murder of", so these don't overlap. Similarly, 'twelve angry men' doesn't overlap with '12 jurors', or "Furiosa" doesn't show up in the description for mad max, despite being the central character.
+
+**Claude:**
+- 🔧 `Edit`: /Users/owenblanchard/CollectiveIntelligence/comp440-retrieval/WRITEUP.md
+- 🔧 `Bash`: Commit Part 4, push, check model download
 
 <!-- end-session: ee7ad5e5-2d3b-4d67-a7e7-986479c607ac -->
