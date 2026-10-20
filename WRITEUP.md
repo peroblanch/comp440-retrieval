@@ -28,7 +28,7 @@ REPEATS_COUNT_LESS = True: This is a fundamental part of TF-IDF, and making it l
 
 ### Your movies: what do the top terms get right and wrong about what makes each one distinctive?
 
-XXXX
+Most of the words for The Town are pretty specific to the movie, although it's interesting that it picks up on unique adjectives like burgeoning, which I wouldn't say is distinctive for the town as much as it's a relatively rare word. For The Hunger Games, the terms seem quite accurate, mostly containing names and relatively unique or rare terms directly relevant to the plot and nature of the film. I think that has to do with The Town description being primarily about the relationships between characters, rather than the actual heist/contents of the movie.
 
 ## Part 3: Your own searches
 
