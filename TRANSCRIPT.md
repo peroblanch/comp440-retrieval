@@ -7,7 +7,7 @@ summarized as one-liners.
 <!-- transcript-session: ee7ad5e5-2d3b-4d67-a7e7-986479c607ac | 2026-10-20T19:08:21.142Z -->
 ## Session `ee7ad5e5`, 2026-10-20 19:08:21
 
-*7 user turns. Tool outputs and reasoning omitted.*
+*10 user turns. Tool outputs and reasoning omitted.*
 
 **User:**
 Let's start the assignment
@@ -92,5 +92,42 @@ Most of the words for The Town are pretty specific to the movie, although it's i
 **Claude:**
 - 🔧 `Edit`: /Users/owenblanchard/CollectiveIntelligence/comp440-retrieval/WRITEUP.md
 - 🔧 `Bash`: Commit Part 2, push, check upstream
+Your answer is in the slot as you said it. Part 2 is saved on GitHub.
+
+**Part 3: Your own searches (about 7 minutes).** You'll run three searches, each a question typed as you'd ask it. README Part 3 suggests three kinds: a detail, the plot retold, something vague.
+
+What is your first question? One example is a movie you know, described in your own words without its title.
+
+**User:**
+<ide_opened_file>The user opened the file /Users/owenblanchard/CollectiveIntelligence/comp440-retrieval/README.md in the IDE. This may or may not be related to the current task.</ide_opened_file>
+
+To clarify, I'm picking a distinct third movie, and writing three question prompts regarding that movie?
+
+**Claude:**
+- 🔧 `Bash`: Read README Part 3
+Yes, that works. The README says to ask three questions about a movie you know, without using its title, and to try more than one kind of question. It can be one movie asked about three ways or three different movies.
+
+The three kinds are a detail, the plot retold, and something vague.
+
+What is your first question? I'll run it exactly as you type it.
+
+**User:**
+1: Dystopian train heist
+2: Apocalypse Tundra Chris Evans
+3: Conspiracy revolution on a train
+
+**Claude:**
+- 🔧 `Bash`: Run the three searches
+- 🔧 `Edit`: /Users/owenblanchard/CollectiveIntelligence/comp440-retrieval/WRITEUP.md
+I ran all three exactly as you typed them and wrote them into your questions slot, one per line.
+
+Did the movies you meant come up? What did TF-IDF get right and wrong? A sentence or two is enough.
+
+**User:**
+The movie I meant did not come up. It appears to pick up on the most specific terms, and find movies that also have them, without combining them as a whole. I wonder if n-grams would help it solve problems like this, because for example separating chris and evans is not helpful. Although maybe I should've tried to remember the characters name.
+
+**Claude:**
+- 🔧 `Edit`: /Users/owenblanchard/CollectiveIntelligence/comp440-retrieval/WRITEUP.md
+- 🔧 `Bash`: Commit Part 3, push, run TF-IDF evaluation
 
 <!-- end-session: ee7ad5e5-2d3b-4d67-a7e7-986479c607ac -->
