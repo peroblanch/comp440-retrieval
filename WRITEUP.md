@@ -20,7 +20,9 @@ On vague descriptions and 'vibe' matchings, embeddings will have underlying valu
 
 ### The settings you chose, and why
 
-XXXX
+REMOVE_STOP_WORDS = True: Stop words have no semantic value, aren't interesting or helpful, and will appear frequently across movie descriptions if not removed.
+MIN_MOVIES = 1: both systems should be able to handle extremely infrequent words that only appear in one movie, but there could be value in identifying movies based on prompts relevant only to that movie.
+REPEATS_COUNT_LESS = True: This is a fundamental part of TF-IDF, and making it less sensitive to repeat words is an important part of the algorithms functionality.
 
 ## Part 2: Top terms
 
