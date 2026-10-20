@@ -10,11 +10,11 @@ Part 0 predictions stay as you first wrote them; Part 5 asks what you would chan
 
 ### Questions that name a character, place or thing: which method will do better, and why?
 
-XXXX
+On questions that name a character or something specific, TF-IDF will be better at matching.
 
 ### Vague descriptions: which method will do better, and why?
 
-XXXX
+On vague descriptions and 'vibe' matchings, embeddings will have underlying values that succeed.
 
 ## Part 1: Build the TF-IDF model
 
